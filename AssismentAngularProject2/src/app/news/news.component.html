@@ -1,0 +1,12 @@
+<div class="container bg-info">
+
+
+        <div class="card card-body" *ngFor="let news of nNews">
+            <img src="{{news.urlToImage}}" alt="" class="card-img-top">
+            <h3>{{news.title}}</h3>
+            <p>{{news.description}}</p>
+            <a href="{{news.url}}" class="btn btn-primary">Click for more</a>
+    
+        </div>
+  
+    </div>
