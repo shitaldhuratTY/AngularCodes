@@ -1,0 +1,29 @@
+<div class="col-md-3 float-left mt-4">
+    <div class="card card-body" *ngFor="let news of businessNews">
+        <img src="{{news.urlToImage}}" alt="" class="card-img-top">
+        <h3>{{news.title}}</h3>
+        <p>{{news.description}}</p>
+        <a href="{{news.url}}" class="btn btn-primary">Click here for more</a>
+
+    </div>
+</div>
+
+<div class="col-md-6 float-left mt-4">
+        <div class="card card-body" *ngFor="let news1 of indianNews">
+            <img src="{{news1.urlToImage}}" alt="" class="card-img-top">
+            <h3>{{news1.title}}</h3>
+            <p>{{news1.description}}</p>
+            <a href="{{news1.url}}" class="btn btn-primary">Click here for more</a>
+    
+        </div>
+    </div>
+
+    <div class="col-md-3 float-left mt-4">
+            <div class="card card-body" *ngFor="let news of businessNews">
+                <img src="{{news.urlToImage}}" alt="" class="card-img-top">
+                <h3>{{news.title}}</h3>
+                <p>{{news.description}}</p>
+                <a href="{{news.url}}" class="btn btn-primary">Click here for more</a>
+        
+            </div>
+        </div>

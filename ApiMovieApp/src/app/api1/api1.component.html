@@ -1,0 +1,23 @@
+<div class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>id</th>
+            <th>avtar url</th>
+            <th>node id</th>
+            <th>url</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let n of git; index as i">
+            <td>{{i+1}}</td>
+            <td>{{n.id}}</td>
+            <td>{{n.avtar_url}}</td>
+            <td>{{n.node_id}}</td>
+            <td>{{n.url}}</td> 
+        </tr>
+    </tbody>
+   
+    </div>
+
+
