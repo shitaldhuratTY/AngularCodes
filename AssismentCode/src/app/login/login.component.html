@@ -1,0 +1,57 @@
+
+    <div class="container">
+            <div [hidden]="submitted" class="card card-body col-md-6 mt-5">
+            
+            <form (ngSubmit)="onSubmit()" #login="ngForm">
+                <legend>Login Form</legend>
+            
+                <div class="form-group">
+                    <label for="name">Email Id</label>
+                    <input type="text" class="form-control" id="name" required >
+
+                     <!-- error msg -->
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger"> 
+                        Email is required
+                    </div>
+                </div>
+
+        
+                <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="text" class="form-control" id="pass" required >
+
+                        <div [hidden]="pass.valid || pass.pristine" class="alert alert-danger">
+                            Password is required
+        
+                        </div>
+                    </div>
+        
+
+                    <button type="submit" class="btn btn-success"
+                    [disabled]="!login.form.valid">Submit</button>
+
+                    <button type="button" class="btn btn-default" (click)="newDetails();
+                    login.reset()">Reset</button>
+        </form>
+        
+
+    </div>
+</div>
+
+
+
+    <!-- <div [hidden]="!submitted" >
+            <h2>You submitted the following:</h2>
+            <div class="row">
+              <div class="col-xs-3">Email :</div>
+              <div class="col-xs-9">{{ model.name }}</div>
+            </div>
+           
+            <br>
+            <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+             </div>
+        </div> -->
+
+
+
+
