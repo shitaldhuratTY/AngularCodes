@@ -1,0 +1,24 @@
+<div class="col-md-4 offset-md-4 mt-4">
+    <h3 class="text-center">Add User!!</h3>
+    <form #userForm='ngForm' (ngSubmit)='postUser(userForm)' >
+        <input type="hidden" name="id" #id='ngModel' [(ngModel)]='firebaseService.selectedUser.id'>
+      
+            <input type="text" name="name" class="form-control mb-3 mt-3" #name='ngModel' 
+            [(ngModel)]='firebaseService.selectedUser.name'
+            placeholder="Enter Name.." required minlength="3">
+
+            <input type="email" name="email" class="form-control mb-3 mt-3" #email='ngModel'  [(ngModel)]='firebaseService.selectedUser.email'
+            placeholder="Enter email.." required email>
+
+            <input type="phno" name="phno" class="form-control mb-3 mt-3" #phno='ngModel'  [(ngModel)]='firebaseService.selectedUser.phno'
+            placeholder="Enter Monile No..." required minlength="10">
+
+            
+        <button type="submit" class="btn btn-outline-success float-right" 
+        [disabled]='userForm.invalid'>Submit</button>
+    </form>
+    
+    </div>
+
+    
+    
